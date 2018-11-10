@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from 'reactstrap'
 
+import './TodoList.scss'
 const TodoList = ({ todos = [], finishTodo }) => {
   const openTodos = todos.filter(todo => !todo.done)
   const closedTodos = todos.filter(todo => todo.done)
 
   return (
-    <div>
+    <div className="TodoList">
       <h2>Open Todos </h2>
       <ul>
         {openTodos.map((todo, key) => (
